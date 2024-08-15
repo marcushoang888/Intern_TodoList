@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.css" integrity="sha512-8BU3emz11z9iF75b10oPjjpamM4Mz23yQFQymbtwyPN3mNWHxpgeqyrYnkIUP6A8KyAj5k2p3MiYLtYqew7gIw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./components/header/header.css" />
+    <link rel="stylesheet" href="components.css" />
+    <link rel="stylesheet" href="./components/sidebar/sidebar.css">
+    <link rel="stylesheet" href="./components/menu/menu.css">
+    <link rel="stylesheet" href="./components/news/news.css">
+    <link rel="stylesheet" href="./components/updateTask/updateTask.css">
+    <link rel="stylesheet" href="utility.css">
+    <link href="https://kit-pro.fontawesome.com/releases/v6.6.0/css/pro.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>To Do List App</title>
+  </head>
+  <body>
+
+  
+
+    <header>
+      <div class="header sidebar">
+        <img src="icon/apps-icon.svg" alt="" class="appIcon" />
+        <aside class="sidebarBox">
+          <img src="icon/apps-icon-dark.svg" alt="" class="appIcon" />
+          <h2>Apps</h2>
+          <ul class="sideBarAppsContainer">
+            <li class="sideBarAppsItem"><img src="icon/outlook.svg" alt="">Outlook</li>
+            <li class="sideBarAppsItem"><img src="icon/onedrive.svg" alt="">OneDrive</li>
+            <li class="sideBarAppsItem"><img src="icon/word.svg" alt="">Word</li>
+            <li class="sideBarAppsItem"><img src="icon/excel.svg" alt="">Excek</li>
+            <li class="sideBarAppsItem"><img src="icon/powerpoint.svg" alt="">PowerPoint</li>
+            <li class="sideBarAppsItem"><img src="icon/onenote.svg" alt="">OneNote</li>
+            <li class="sideBarAppsItem"><img src="icon/sharepoint.svg" alt="">SharePoint</li>
+            <li class="sideBarAppsItem"><img src="icon/teams.svg" alt="">Teams</li>
+            <li class="sideBarAppsItem"><img src="icon/sway.svg" alt="">Sway</li>
+          </ul>
+          <a href="#">Explore all your apps →</a>
+        </aside>
+      </div>
+      <div class="header search">
+        
+        <a href="#" class="webpage">
+          <p>To Do</p>
+        </a>
+        
+        <div class="searchBar">
+          <button class="searchIcon">
+            <img src="icon/search-icon.svg" alt="" />
+          </button>
+          
+
+          <input class="searchInput"></input>
+        </div>
+        <div class="settings">
+          <img src="icon/settings.svg" alt="">
+        </div>
+      </div>
+      <div class="header profile">
+        <img src="img/avatar.jpg" alt="" class="avatar" />
+      </div>
+    </header>
+
+    <div class="container">
+      <menu class="menu ">
+
+        <img src="icon/menu-icon.svg" alt="" class="menuIcon">
+        <ul>
+          <li class="menuBtn">To do list</li>
+            <li class="menuBtn">News</li>
+        </ul>
+      </menu>
+
+      <main id="todoBody" class="main active">
+        <h1>To Do List</h1>
+        <div class="">
+          <input
+            type="text"
+            id="input"
+            class="inputTask"
+            placeholder="Add a task"
+            onClick="showBtn()"
+          />
+        </div>
+        <div class="otherInfo">
+          <input type="date" class="calendar" />
+          <button id="add-button" class="btnSubmit">Add</button>
+        </div>
+  
+        <!-- Important Tasks -->
+         <form id="importantContainer"action="">
+          <input id="importantCheck"type="checkbox" class="importantCheck">
+          <label for="importantCheck">Important</label>
+         </form>
+        
+        <!-- Uncompleted -->
+        <div id="todo"></div>
+  
+        <br />
+  
+        <!-- Completed -->
+        <div class="complete">
+          <p>Completed <span class="numberCompleted"></span></p>
+        </div>
+  
+        <div id="doneTodo"></div>
+      </main>
+
+     
+
+      <main class="newsBody main">
+        <h1>News</h1>
+        <div class="news"></div>
+
+        <div class="btnList">
+            <button class="btnNews" onClick=getNumber(1)>1</button>
+            <button class="btnNews" onClick=getNumber(2)>2</button>
+            <button class="btnNews" onClick=getNumber(3)>3</button>
+            <button class="btnNews" onClick=getNumber(4)>4</button>
+            <button class="btnNews" onClick=getNumber(5)>5</button>
+        </div>
+      </main>
+    </div>
+  
+    <div class="updateBox ">
+      <button class="updateClose btnSubmit"><i class="fa-solid fa-rectangle-xmark"></i></button>
+      <input type="text" class="updateInput">
+      <input type="date" class="updateDate calendar">
+      <button class="updateBtn btnSubmit">Update</button>
+    </div>
+  </body>
+  <script src="main.js"></script>
+  <script src="./components/news/News.js"></script>
+  <script src="./components/updateTask/updateTask.js"></script>
+</html>

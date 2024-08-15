@@ -1,0 +1,47 @@
+.appIcon {
+    cursor: pointer;
+    width: 2rem;
+}
+
+.sideBarAppsContainer {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.5rem 1rem;
+    padding: 1rem;
+}
+.sideBarAppsItem {
+    display: flex;
+    align-items: center;
+}
+.sideBarAppsItem > img {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.sidebarBox a {
+    display: block;
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #225cbf;
+    font-weight: 600;
+}
+
+.sidebarBox {
+    padding: 1rem;
+    position: absolute;
+    width: 20rem;
+    height: 100vh;
+    transition: all 0.3s ease;
+    transform: scale(0);
+    transform-origin: top left;
+    top: 0;
+    left: 0;
+    box-shadow: 20px 9px 18px 0px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+}
+
+.sideBarActive {
+    transform: scale(1);
+}

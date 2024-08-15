@@ -1,0 +1,6 @@
+.throughline {
+    text-decoration: line-through;
+}
+.active {
+    display: block;
+}

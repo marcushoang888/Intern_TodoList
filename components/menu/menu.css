@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+}
+
+.menu {
+  min-width: 18rem;
+  box-shadow: 3px 0px 16px 4px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+
+}
+
+.menuIcon {
+    padding: 1rem 1.5rem;
+    
+}
+.menu li {
+    padding: 1rem 0;
+    padding-left: 1.5rem;
+    list-style: none;
+    border-bottom: 1px solid rgba(72, 59, 59, 0.459);
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background-color: #1f79c7b8;
+}

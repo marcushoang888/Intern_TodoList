@@ -1,0 +1,91 @@
+.todoComponent {
+    width: 100%;
+    height: 3.25rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0.3px 0.9px 0px, rgba(0, 0, 0, 0.1) 0px 1.6px 3.6px 0px;
+    margin-top: 0.5rem;
+    padding:0 1rem ;
+    color: #2564cf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.otherInfo {
+    width: 100%;
+    display: none;
+    justify-content: space-between;
+    padding: 1.1rem 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0.3px 0.9px 0px, rgba(0, 0, 0, 0.1) 0px 1.6px 3.6px 0px;
+}
+
+.listItem {
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+}
+.circle {
+
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border:  1px solid #2564cf;
+    margin-right: 0.5rem;
+    color: white;
+    text-align: center;
+    padding: 2px;
+}
+
+.circle:hover {
+    color: #2564cf;
+    cursor: pointer;
+}
+
+.circle.done {
+    background: #2564cf;
+    color: white;
+}
+
+.taskContent {
+    flex-grow: 1;
+}
+
+
+
+.btnSubmit {
+    background: #225cbf;
+    width: fit-content;
+    color: white;
+    border-radius: 10px;
+    transition: all 0.1s ease;
+    cursor: pointer;
+}
+
+.btnSubmit:hover {
+    background: #276be0;
+    scale: 1.1;
+}
+
+.btnSubmit:active {
+    background: #276be0;
+    scale: 0.9;
+}
+
+#importantContainer {
+    margin: 1rem 0;
+    color: #225cbf;
+    font-weight: 600;
+}
+
+
+.calendar {
+    border: 1px solid #225cbf;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    
+}
+
+.calendar:focus {
+    outline: 1px solid #123571;
+
+}

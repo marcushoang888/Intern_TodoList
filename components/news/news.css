@@ -1,0 +1,55 @@
+.newsBody {
+    width: 100%;
+}
+
+.articleComponent {
+    border: 1px solid rgba(50, 47, 47, 0.813);
+    display: flex;
+    margin: 1rem 0;
+    border-radius: 10px;
+}
+
+.articleContent {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;;
+}
+.articleImg {
+    width: 40%;
+}
+
+.articleDesc {
+    flex-grow: 1;
+}
+.articleLink {
+    float: right;
+    text-decoration: none;
+    align-self: self-end;
+}
+
+.btnList {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btnNews {
+    background-color: #2564cf;
+    color: white;
+    transition: all 0.1s ease;
+    cursor: pointer;
+}
+
+.btnNews:hover {
+    scale: 0.9;
+}
+
+.btnNews:active {
+    scale: 1.1;
+}
+
+.btnSubmit.articleLink {
+    padding: 1rem;
+}
