@@ -2,8 +2,8 @@ let news = document.querySelector(".news");
 
 function getNumber(number) {
     fetch(
-        `
-        https://newsapi.org/v2/everything?q=apple&from=2024-08-14&to=2024-08-14&sortBy=popularity&apiKey=b525d9255c0c463ab0fef771579f365a&page=${number}&pageSize=5`
+        `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=b525d9255c0c463ab0fef771579f365a&page=${number}&pageSize=5` 
+        
     )
         .then((response) => {
             if (!response.ok) {
