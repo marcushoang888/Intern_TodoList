@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>To Do List App</title>
   </head>
-  <body>
+  <body id="body">
 
   
 
@@ -74,7 +74,7 @@
       </menu>
 
       <main id="todoBody" class="main active">
-        <h1>To Do List</h1>
+        <h1><img src="icon/menu-icon.svg" alt="" class="menuIcon menuIconBody"> To Do List</h1>
         <div class="">
           <input
             type="text"
@@ -102,16 +102,16 @@
   
         <!-- Completed -->
         <div class="complete">
-          <p>Completed <span class="numberCompleted"></span></p>
+          <p>Completed <i class="angle fa-solid fa-angle-down"></i> <span class="numberCompleted"></span></p>
         </div>
   
-        <div id="doneTodo"></div>
+        <div id="doneTodo" class="done doneBox activeTodo"></div>
       </main>
 
      
 
       <main class="newsBody main">
-        <h1>News</h1>
+        <h1><img src="icon/menu-icon.svg" alt="" class="menuIcon menuIconBody"> News</h1>
         <div class="news"></div>
 
         <div class="btnList">

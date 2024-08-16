@@ -58,3 +58,21 @@ input::placeholder {
   padding: 0 1rem;
 }
 
+
+.complete {
+  cursor: pointer;
+}
+.doneBox {
+  transition: all 0.1s ease;
+  visibility: hidden;
+  transform: translateY(-20px);
+
+}
+
+.activeTodo {
+  transition: all 0.1s ease;
+
+  display: block;
+  visibility:visible;
+  transform: translateY(0px);
+}

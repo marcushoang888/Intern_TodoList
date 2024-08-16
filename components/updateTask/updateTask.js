@@ -1,26 +1,33 @@
 let updateClose = document.querySelector(".updateClose");
 let updateBox = document.querySelector(".updateBox");
-let updateDate = document.querySelector(".updateDate");
+let updateBtn = document.querySelector(".updateBtn");
 updateClose.addEventListener("click", () => {
     updateBox.classList.toggle("updateBoxAnimation");
 });
+
 function updateTask(id) {
     let updateInput = document.querySelector(".updateInput");
-    let updateBtn = document.querySelector(".updateBtn");
+    let updateDate = document.querySelector(".updateDate");
     updateBox.classList.toggle("updateBoxAnimation");
-    updateInput.value = tasks.filter((task) => {
-        return task.id == id;
-    })[0].content;
-    updateBtn.addEventListener("click", () => {
-        tasks = tasks.map((task) => {
-            if (task.id == id) {
-                task.content = updateInput.value;
-                task.date =     updateDate.value;
-            }
-            return task;
-        });
-        updateBox.classList.toggle("updateBoxAnimation");
-        updateDataToLocalStorage();
-        showTasks(tasks);
-    });
+
+    let updateTask = tasks.find((task) => task.id == id);
+    if (updateTask) {
+        updateInput.value = updateTask.content;
+        updateDate.value = updateTask.date;
+    }
+
+    updateBtn.setAttribute("task-id", id);
 }
+
+updateBtn.addEventListener("click", () => {
+    let updateInput = document.querySelector(".updateInput");
+    let updateDate = document.querySelector(".updateDate");
+    let taskId = updateBtn.getAttribute("task-id");
+    let updateTask = tasks.find((task) => task.id == taskId);
+    updateTask.content = updateInput.value;
+    updateTask.date = updateDate.value;
+
+    updateBox.classList.toggle("updateBoxAnimation");
+    updateDataToLocalStorage();
+    showTasks(tasks);
+});

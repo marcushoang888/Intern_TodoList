@@ -9,12 +9,6 @@
     border-radius: 10px;
 }
 
-.articleContent {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;;
-}
 .articleImg {
     width: 40%;
 }

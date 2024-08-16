@@ -6,11 +6,13 @@
   min-width: 18rem;
   box-shadow: 3px 0px 16px 4px rgba(0, 0, 0, 0.1);
   height: 100vh;
+  display: none;
 
 }
 
 .menuIcon {
     padding: 1rem 1.5rem;
+    cursor: pointer;
     
 }
 .menu li {
@@ -23,4 +25,9 @@
 
 .menu li:hover {
     background-color: #1f79c7b8;
+}
+
+.menuIconBody {
+  padding: 0;
+  cursor: pointer;
 }

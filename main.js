@@ -8,13 +8,43 @@ const calendar = document.querySelector(".calendar");
 const inputImportantCheck = document.querySelector("#importantCheck");
 const sidebarBox = document.querySelector(".sidebarBox");
 const appIcons = document.querySelectorAll(".appIcon");
+const container = document.querySelector(".container");
+const complete = document.querySelector(".complete");
+const angle = document.querySelector(".angle");
+const menuIcons = document.querySelectorAll(".menuIcon");
+const menu = document.querySelector(".menu");
+
 let menuBtns = document.querySelectorAll(".menuBtn");
 let mains = document.querySelectorAll(".main");
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+complete.addEventListener("click", () => {
+    doneTodo.classList.toggle("activeTodo");
+    angle.classList.toggle("fa-angle-up");
+
+
+    if (!doneTodo.classList.contains("activeTodo")) {
+        setTimeout(function () {
+            doneTodo.style.display = "none";
+        }, 500);
+    } else {
+        setTimeout(function () {
+            doneTodo.style.display = "block";
+        }, 500);
+    }
+});
+
 if (tasks.length > 0) {
     showTasks(tasks);
 }
 
+container.addEventListener("click", () => {
+    if (sidebarBox.classList.contains("sideBarActive")) {
+        console.log(true);
+
+        sidebarBox.classList.toggle("sideBarActive");
+    }
+});
 // Event
 inputImportantCheck.addEventListener("click", () => {
     if (inputImportantCheck.checked) {
@@ -32,12 +62,16 @@ document.getElementById("add-button").addEventListener("click", () => {
     showTasks(tasks);
 });
 
-inputTask.addEventListener("keypress", (event) => {
-    if (event.key == "Enter") {
+document.addEventListener("keypress", (event) => {
+    if (event.key == "Enter" && inputTask.value != "" && calendar.value != "") {
         addTask();
         showTasks(tasks);
+    } else if (event.key == "Enter") {
+        alert("Please fill in all the fields");
+        event.preventDefault();
     }
 });
+
 // Single Page Application
 menuBtns.forEach((menuBtn, index) => {
     menuBtn.addEventListener("click", () => {
@@ -55,11 +89,8 @@ menuBtns.forEach((menuBtn, index) => {
 appIcons.forEach((appIcon) => {
     appIcon.addEventListener("click", () => {
         sidebarBox.classList.toggle("sideBarActive");
-    
-      
     });
 });
-
 
 // ******************************************************
 // FUNCTION
@@ -68,9 +99,6 @@ function updateDataToLocalStorage() {
 }
 
 function addTask() {
-    if (inputTask.value == "" || calendar.value == "") {
-        return alert("Please fill in all the fields");
-    }
     tasks.push({
         id: new Date().getTime(),
         content: inputTask.value,
@@ -159,3 +187,13 @@ function changeImportant(id) {
 function showBtn() {
     otherInfo.style.display = "flex";
 }
+
+
+menuIcons.forEach((menuIcon) => {
+    menuIcon.addEventListener("click", () => {
+        menu.classList.toggle("active");
+        
+    });
+})
+
+
